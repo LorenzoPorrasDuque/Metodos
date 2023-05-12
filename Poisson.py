@@ -1,3 +1,4 @@
+from scipy.stats import expon, kstest
 import matplotlib.pyplot as plt
 import scipy.stats
 import csv
@@ -21,3 +22,7 @@ res = scipy.stats.fit(dist, data, bounds)
 print(res)
 res.plot()
 plt.show()
+
+
+ks_statistic, p_value = kstest(data, 'poisson', args=(4.9679,0))
+print(ks_statistic, p_value)
