@@ -1,3 +1,4 @@
+from scipy.stats import expon, kstest
 import matplotlib.pyplot as plt
 import scipy.stats
 import csv
