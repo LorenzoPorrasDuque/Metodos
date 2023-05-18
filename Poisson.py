@@ -3,9 +3,9 @@ import matplotlib.pyplot as plt
 import scipy.stats
 import numpy as np
 
-data = scipy.stats.poisson.rvs(7, size=15)
+data = scipy.stats.poisson.rvs(7, size=30)
 dist = scipy.stats.poisson
-bounds = [(-100, 100)]
+bounds = [(0, 100)]
 res = scipy.stats.fit(dist, data, bounds)
 print(res)
 kstest_result = scipy.stats.kstest(data, 'poisson', args=[res.params[0]])
