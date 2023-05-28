@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import scipy.stats
 import numpy as np
 
-data = scipy.stats.poisson.rvs(7, size=30)
+data = [14,5,10,8,12,7]
 dist = scipy.stats.poisson
 bounds = [(0, 100)]
 res = scipy.stats.fit(dist, data, bounds)
